@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Login</h1>
+      <p>Use "admin" for both username and password</p>
+      <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <br />
+        <br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required /><br />
+        <br />
+        <br />
+        <button type="button" onclick="login()">Login</button>
+      </form>
+    </div>
+
+    <div class="home-container" style="display: none">
+      <h1>Home Page</h1>
+      <button onclick="showConverter()">Currency Conversion</button>
+    </div>
+
+    <div class="converter-container" style="display: none">
+      <h1>Currency Converter</h1>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" required /><br />
+      <label for="from">From:</label>
+      <select id="from">
+        <option value="GBP">Pounds sterling (GBP)</option>
+        <option value="USD">American dollars (USD)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="BRL">Brazilian real (BRL)</option>
+        <option value="JPY">Japanese yen (JPY)</option>
+        <option value="TRY">Turkish lira (TRY)</option></select
+      ><br />
+      <label for="to">To:</label>
+      <select id="to">
+        <option value="GBP">Pounds sterling (GBP)</option>
+        <option value="USD">American dollars (USD)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="BRL">Brazilian real (BRL)</option>
+        <option value="JPY">Japanese yen (JPY)</option>
+        <option value="TRY">Turkish lira (TRY)</option></select
+      ><br />
+      <button onclick="convertCurrency()">Convert</button>
+      <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
